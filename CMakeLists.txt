@@ -20,7 +20,7 @@ SET_DIRECTORY_PROPERTIES(PROPERTIES EP_PREFIX .)
 ExternalProject_Add(
 eigen3
 URL https://bitbucket.org/eigen/eigen/get/3.2.8.tar.gz
-TIMEOUT 30
+TIMEOUT 300
 # Apply the LLT malloc fix patch
 PATCH_COMMAND patch -p1 -t -N < ${PROJECT_SOURCE_DIR}/patch/eigen-3.2.8-no-malloc-in-llt.patch
 # Disable install step
